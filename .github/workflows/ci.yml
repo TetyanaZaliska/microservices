@@ -11,6 +11,10 @@ permissions:
   contents: read
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   main:
     runs-on: ubuntu-latest
     steps:
