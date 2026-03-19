@@ -2,13 +2,16 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "module": "ESNext",
+    "declaration": true,
     "types": ["node"],
+    "target": "es2021",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "target": "ES2023",
-    "esModuleInterop": true,
-    "moduleResolution": "bundler"
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "strictBindCallApply": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src/**/*.ts"],
   "exclude": [
