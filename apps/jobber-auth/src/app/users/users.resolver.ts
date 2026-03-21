@@ -11,11 +11,11 @@ export class UsersResolver {
   async createUser(
     @Args('createUserInput') createUserInput: CreateUserInput
   ) {
-    return this.createUser(createUserInput);
+    return this.usersService.createUser(createUserInput);
   }
 
   @Query(() => [User], { name: 'users' })
   async getUsers() {
-    return ;
+    return this.usersService.getUsers();
   }
 }
