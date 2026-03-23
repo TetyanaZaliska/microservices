@@ -1,6 +1,14 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { PrismaService } from './prisma.service';
 
+jest.mock('./prisma.service', () => {
+  return {
+    PrismaService: jest.fn().mockImplementation(() => ({
+      $connect: jest.fn(),
+    })),
+  };
+});
+
 describe('PrismaService', () => {
   let service: PrismaService;
 
