@@ -50,7 +50,7 @@
       "dependsOn": ["build"],
       "options": {
         "buildTarget": "jobber-auth:build",
-        "runBuildTargetDependencies": false
+        "runBuildTargetDependencies": true
       },
       "configurations": {
         "development": {
@@ -67,7 +67,7 @@
       }
     },
     "generate-types": {
-        "command": "prisma generate",
+      "command": "prisma generate",
       "options": {
         "cwd": "apps/jobber-auth"
       }
